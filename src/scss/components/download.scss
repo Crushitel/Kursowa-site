@@ -1,0 +1,54 @@
+.download {
+  padding-top: 0px !important;
+  &__container {
+    display: flex;
+    gap: 80px;
+  }
+  &__title {
+    @extend %title;
+  }
+  &__text {
+    margin-top: 1px;
+    color: var(--gray-color);
+  }
+  &__links-list {
+    margin-top: 41px;
+    display: flex;
+    gap: 25px;
+  }
+  .statistics {
+    display: flex;
+    margin-top: 60px;
+    gap: 30px;
+    &__item {
+      width: 170px;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      border-radius: 10px;
+      background-color: var(--primary-color);
+    }
+    &__number {
+      color: var(--secondary-color);
+      font-size: 25px;
+      margin-top: 18px;
+      font-weight: 600;
+      text-align: center;
+      line-height: normal;
+      text-transform: uppercase;
+    }
+    &__text {
+      margin-top: 18px;
+      color: var(--secondary-color);
+      text-align: center;
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    &__icon {
+      fill: var(--secondary-color);
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

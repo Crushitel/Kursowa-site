@@ -1,0 +1,56 @@
+.hero {
+  background-image: url('@img/Background.jpg');
+  &__section {
+    padding-top: 224px;
+    padding-bottom: 75px;
+  }
+  position: relative;
+  .content {
+    align-items: center;
+    gap: 196px;
+    display: flex;
+  }
+  align-items: center;
+  display: flex;
+  gap: 44px;
+  &__background {
+    position: relative;
+    background-color: var(--secondary-color);
+    padding: 40px 23px 41px 30px;
+    width: 570px;
+    height: 432px;
+  }
+  &__border {
+    position: absolute;
+    width: 570px;
+    height: 535px;
+    right: 48%;
+    top: 31%;
+    border: 18px solid #7572ff;
+  }
+  &__title {
+    color: var(--primary-color);
+    font-size: 48.83px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+  &__picture {
+    margin-right: 50px;
+  }
+  &__text {
+    margin-top: 18px;
+    color: var(--gray-color);
+  }
+  &__download-app {
+    margin-top: 52px;
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  &__store-list {
+    margin-top: 6px;
+    display: flex;
+    gap: 14px;
+  }
+}

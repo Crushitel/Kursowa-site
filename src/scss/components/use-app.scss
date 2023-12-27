@@ -1,0 +1,63 @@
+.use-app {
+  background-image: url('@img/Background.jpg');
+  margin-bottom: 210px;
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    color: var(--secondary-color);
+    @extend %title;
+    text-align: center;
+  }
+  &__text {
+    color: var(--secondary-color);
+    @extend %text;
+    text-align: center;
+    padding-top: 33px;
+    padding-bottom: 81px;
+  }
+  &__wrapper {
+    overflow: hidden;
+    position: absolute;
+    top: 227px;
+    width: 770px;
+    height: 319px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 100px 0px rgba(0, 0, 0, 0.24);
+    &::before {
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        rgba(88, 81, 234, 0.4) 0%,
+        rgba(88, 81, 234, 0.4) 100%
+      );
+    }
+  }
+  &__image {
+    background-image: linear-gradient(
+      rgba(88, 81, 234, 0.4),
+      rgba(88, 81, 234, 0.4)
+    );
+    width: 770px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &__video-icon {
+    z-index: 2;
+    top: 50%;
+    position: relative;
+    transform: translate(-50%, -50%);
+    left: 50%;
+  }
+}

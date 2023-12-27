@@ -1,0 +1,63 @@
+@use 'sass:math';
+
+//Підключення шрифтів із Google Fonts
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300,regular,600,700&display=swap');
+
+/**
+* Підключення шрифтів із папки "./src/fonts"
+*/
+//@import 'config/fonts';
+
+/** Підключення змінних */
+@import 'config/variables';
+
+/**
+* Підключення Sass функцій mixins та шаблонів
+*/
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+/** Обнулення */
+@import 'config/reset';
+
+/**
+* Бібліотеки
+* розкоментуйте тільки ті, які використовуєте
+*/
+// @import 'libs/aos';
+@import 'libs/swiper';
+
+/**
+* підключення стилів для кастомного скролу
+*/
+@import 'config/scrollbar';
+
+/**
+* Спільні стилі для всіх сторінок
+*/
+@import 'config/base';
+
+// Підключення нормалізатора стилів
+@import 'config/modern-normalize';
+/**
+* БЕМ блоки для стилів
+*/
+@import 'config/common';
+
+/**
+* Стилі для компонентів
+*/
+@import 'components/header';
+@import 'components/hero';
+@import 'components/about';
+@import 'components/features';
+@import 'components/app-look';
+@import 'components/download';
+@import 'components/use-app';
+@import 'components/team';
+@import 'components/customers';
+@import 'components/blog';
+@import 'components/contact-info';
+@import 'components/footer';

@@ -1,0 +1,23 @@
+$mainOffset: 15; // Відступи безпеки для контенту
+$maxWidth: 1440; // максимальна ширина сторінки
+$minWidth: 320; // мінімальна ширина телефона
+$containerWidth: 1170; // ширина контейнеру із макету
+$maxWidthContainer: $containerWidth + ($mainOffset * 2); // ширина контейнера з урахуванням padding зліва і справа
+
+:root {
+  --bs-font-family: 'Josefin Sans'; // Сімейство шрифтів за замовчуванням
+  --bs-font-size: 16px; // Розмір шрифта за замовчуванням
+  --bs-font-weight: 400; // Жирність шрифта за замовчуванням
+  --bs-line-height: 1.5; // Базова висота рядка
+  --bs-font-color: #6c6c72; // Колір тексту за замовчуванням
+  --bs-transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); // Базова функція переходу
+  --bs-radius: 10px;
+  --primary-color: #5956e9;
+  --secondary-color: #fff;
+  --black-color: #232233;
+  --gray-color: #6c6c72;
+
+  --bs-shadow: 0px 2px 3px rgba(#000, 10%), 0px 8px 3px rgba(#000, 10%);
+  --hover-shadow: 0 0 5px 0 rgba(#000, 10%), 0 0 10px 0 rgba(#000, 10%),
+    0 0 15px 0 rgba(#000, 10%);
+}

@@ -1,0 +1,107 @@
+/* Шаблони (заготовки)
+* @extend %ім'я-шаблону;
+*/
+// Лічильник для списку
+%list-counter {
+  list-style-type: none;
+  counter-reset: item;
+
+  li {
+    position: relative;
+
+    &:before {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+}
+// Вертикальний список
+%list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+// Адаптивне відео
+%responsive-video {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  padding-bottom: 56.25%;
+
+  video,
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Відео в якості фону
+%video-background {
+  video,
+  iframe,
+  object,
+  embed {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+  }
+}
+
+// сірий фільтр
+%gray-filter {
+  transition: all 0.3s ease 0s;
+  filter: grayscale(1);
+
+  @media (any-hover: hover) {
+    &:hover {
+      filter: grayscale(0);
+    }
+  }
+}
+
+// відключення виділення
+%no-select {
+  user-select: none;
+}
+
+// дзеркальне відображення
+%mirror {
+  transform: scale(-1, 1);
+}
+
+// плавний скрол
+%smooth-scroll {
+  -webkit-overflow-scrolling: touch;
+}
+
+// приховати скрол
+%hide-scroll {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+%flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

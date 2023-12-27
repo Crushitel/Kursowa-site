@@ -1,0 +1,74 @@
+.customers {
+  background-image: url('@img/Background.jpg');
+  background-size: cover;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 0;
+  }
+  &__title {
+    @extend %title;
+    color: var(--secondary-color);
+    text-align: center;
+  }
+  &__text {
+    color: var(--secondary-color);
+    @extend %text;
+    text-align: center;
+    margin-top: 23px;
+  }
+  &__swiper {
+    padding-bottom: 60px;
+    margin-top: 60px;
+    width: 100%;
+  }
+  &__item {
+    border-radius: 10px;
+    padding: 40px 61px 36px 62px;
+    background-color: var(--secondary-color);
+  }
+  &__picture {
+    margin: 0 280px;
+    border-radius: 96px;
+  }
+  &__name {
+    @extend %title;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__proffecion {
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--black-color);
+    margin-top: 1px;
+  }
+  .swiper-slide-next,
+  .swiper-slide-prev {
+    padding: 40px 37px 23px 38px;
+  }
+  &__content {
+    color: var(--gray-color);
+    margin-top: 8px;
+    text-align: center;
+  }
+  &__pagination {
+    --swiper-pagination-bullet-inactive-color: var(--secondary-color);
+    --swiper-pagination-bullet-inactive-opacity: 1;
+  }
+  .swiper-pagination-bullet-active {
+    position: relative;
+    top: 1.5px;
+  }
+  .swiper-pagination-bullet-active::before {
+    position: relative;
+    bottom: 30%;
+    right: 25%;
+    padding: 2.5px 10.5px;
+    content: '';
+    border: 1px solid var(--secondary-color);
+    border-radius: 14px;
+  }
+}

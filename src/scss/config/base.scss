@@ -1,0 +1,67 @@
+/** Базові анімації: */
+@import 'keyframes';
+
+/** Стилі для повноекраного блоку: */
+// @import "fullscreen";
+
+/*
+* (i) Стилі будуть застосовуватися до
+* всіх класів включаючи *__container
+* наприклад header__container, main__container и т.д.
+*/
+[class*='__container'] {
+  max-width: rem($maxWidthContainer);
+  margin: 0 auto;
+  padding: 0 rem($mainOffset);
+}
+.background {
+  background-image: url('@img/Background.png');
+  background-size: cover;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+// Стили відгукуючих картинок (IBG) ============================================
+[class*='-ibg'] {
+  position: relative;
+
+  img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+}
+
+[class*='-ibg_contain'] {
+  img {
+    object-fit: contain;
+  }
+}
+
+// Оболонка ===================================================================
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  /** Змінити на clip - якщо використовується в проекті position: sticky */
+  overflow: hidden;
+}
+
+.page {
+  position: relative;
+  flex: 1 1 auto;
+
+  [data-observ] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: rem(2);
+    background: transparent;
+    pointer-events: none;
+  }
+}
