@@ -71,22 +71,33 @@
   </div>
   <div class="header__container navigate">
     <nav class="header__menu menu">
+      <button class="menu__burger-button">
+        <svg width="24" height="24" class="menu__burger-icon">
+          <use href="images/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
       <ul class="menu__list menu__list--left">
         <li class="menu__item">
-          <a href="index.html" class="menu__link menu__link--active">Home</a>
+          <a href="index.html" class="menu__link">Home</a>
         </li>
-        <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Features</a></li>
+        <li class="menu__item">
+          <a href="#about" class="menu__link">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#features" class="menu__link">Features</a>
+        </li>
       </ul>
       <div class="header__logo-background">
-        <a href="#" class="header__logo"><img src="images/logo.jpg" alt="Appoly" width="167" height="28"></a>
+        <a href="index.html" class="header__logo"><img class="header__logo-img" src="images/logo.jpg" alt="Appoly"></a>
       </div>
       <ul class="menu__list menu__list--right">
         <li class="menu__item">
           <a href="#" class="menu__link">Screenshot</a>
         </li>
-        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
         <li class="menu__item">
+          <a href="#blog" class="menu__link">Blog</a>
+        </li>
+        <li class="menu__item menu__item--download">
           <a href="#" class="menu__link menu__link--download">Download</a>
         </li>
       </ul>
@@ -109,12 +120,12 @@
       <ul class="hero__store-list">
         <li class="hero__store-item">
           <a href="https://play.google.com" target="_blank">
-            <img src="images/google_play.jpg" alt="Google Play" width="149" height="47">
+            <img class="hero__store-image" src="images/google_play.jpg" alt="Google Play" width="149" height="47">
           </a>
         </li>
         <li class="hero__store-item">
           <a href="https://apps.apple.com" target="_blank">
-            <img src="images/app_store.jpg" alt="App Store" width="149" height="47">
+            <img class="hero__store-image" src="images/app_store.jpg" alt="App Store" width="149" height="47">
           </a>
         </li>
       </ul>
@@ -124,7 +135,7 @@
 </section>
  <section class="section about">
   <div class="about-content about__container">
-    <h2 class="about__title">About Our App</h2>
+    <h2 class="about__title" id="about">About Our App</h2>
     <p class="about__description">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
       velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
@@ -132,7 +143,7 @@
       libero urna, feugiat.
     </p>
     <div class="about__content">
-      <img src="images/about_image.jpg" alt="" width="386" height="526">
+      <img class="about__image" src="images/about_image.jpg" alt="" width="386" height="526">
       <ul class="about__list">
         <li class="about__item">
           <svg class="about__icon" width="24" height="24">
@@ -174,7 +185,7 @@
 
         <section class="section features">
   <div class="features__container">
-    <h2 class="features__title">App features</h2>
+    <h2 class="features__title" id="features">App features</h2>
     <p class="features__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
       velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
@@ -333,7 +344,7 @@
             <use href="images/sprite.svg#icon-star"></use>
           </svg>
           <p class="statistics__number">1500</p>
-          <p class="statistics__text">5 Star Rating</p>
+          <p class="statistics__text">5 star rating</p>
         </li>
       </ul>
     </div>
@@ -349,12 +360,7 @@
       tincidunt rhoncus, ullamcorper velit. Ullamcorper risus tempor, ac nunc
       libero urna, feugiat.
     </p>
-    <div class="use-app__wrapper">
-      <img class="use-app__image" src="images/video-photo.jpg">
-      <svg class="use-app__video-icon" width="70" height="70">
-        <use href="images/sprite.svg#icon-play"></use>
-      </svg>
-    </div>
+    <iframe class="use-app__video" width="770" height="319" src="https://www.youtube.com/embed/D7SlK16o82o?si=OHVo1rejqDXA0bNd" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -463,7 +469,6 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc
           ante velit vitae. Est tellus vitae.
         </p>
-        <p class="team__description"></p>
         <ul class="team__socials-list">
           <li class="team__socials-item--facebook">
             <a href="#" class="team__socials-link team__socials-link--facebook">
@@ -572,7 +577,7 @@
 
         <section class="section blog">
   <div class="blog__container">
-    <h2 class="blog__title">Our Recent Blog</h2>
+    <h2 class="blog__title" id="blog">Our Recent Blog</h2>
     <p class="blog__text">
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra nunc ante
       velit vitae. Est tellus vitae, nullam lobortis enim. Faucibus amet etiam
@@ -581,7 +586,7 @@
     </p>
     <ul class="blog__list">
       <li class="blog__item">
-        <img src="images/Snapchat.jpg" alt="Snapchat" width="370" height="228">
+        <img class="blog__img" src="images/Snapchat.jpg" alt="Snapchat" width="370" height="228">
         <h3 class="blog__article">
           The Snap Pixel: How It Works and How to Install
         </h3>
@@ -592,7 +597,7 @@
         <a href="#" class="blog__link">Read More</a>
       </li>
       <li class="blog__item">
-        <img src="images/iphone-instagram.jpg" alt="Instagram" width="370" height="228">
+        <img class="blog__img" src="images/iphone-instagram.jpg" alt="Instagram" width="370" height="228">
         <h3 class="blog__article">
           Global Partner Solutions: A Partnership of Innovation
         </h3>
@@ -603,7 +608,7 @@
         <a href="#" class="blog__link">Read More</a>
       </li>
       <li class="blog__item">
-        <img src="images/you-can.jpg" alt="You can" width="370" height="228">
+        <img class="blog__img" src="images/you-can.jpg" alt="You can" width="370" height="228">
         <h3 class="blog__article">
           2021: An opportunity for Snapchatters to start fresh
         </h3>
@@ -690,16 +695,16 @@
       <h3 class="quick-links__title">Quick link</h3>
       <ul class="quick-links__list">
         <li class="quick-links__item">
-          <a class="quick-links__link" href="#">About</a>
+          <a class="quick-links__link" href="#about">About</a>
         </li>
         <li class="quick-links__item">
-          <a class="quick-links__link" href="#">Features</a>
+          <a class="quick-links__link" href="#features">Features</a>
         </li>
         <li class="quick-links__item">
           <a class="quick-links__link" href="#">Screenshot</a>
         </li>
         <li class="quick-links__item">
-          <a class="quick-links__link" href="#">Blog</a>
+          <a class="quick-links__link" href="#blog">Blog</a>
         </li>
       </ul>
     </div>

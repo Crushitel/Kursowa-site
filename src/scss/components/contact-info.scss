@@ -1,6 +1,14 @@
 .contact-info {
   &__container {
     padding-bottom: 133px;
+    @include media-mx(1200) {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 84px;
+    }
+    @include media-mx(767) {
+      padding-bottom: 151px;
+    }
   }
   &__wrapper {
     position: absolute;
@@ -8,10 +16,24 @@
     border-radius: 30px;
     box-shadow: 0px 8px 43px -9px rgba(33, 33, 33, 0.66);
     padding: 60px 193px 65px 50px;
+    @include media-mx(1200) {
+      padding: 45px 103px 45px 18px;
+    }
+    @include media-mx(767) {
+      max-width: 343px;
+      padding: 30px 43px 34px 51px;
+    }
   }
   &__list {
     display: flex;
     gap: 234px;
+    @include media-mx(1200) {
+      gap: 133px;
+    }
+    @include media-mx(767) {
+      flex-direction: column;
+      gap: 50px;
+    }
   }
   &__border {
     position: absolute;
@@ -21,6 +43,15 @@
     display: inline-block;
     border-left: 4px solid var(--gray-color);
     height: 117px;
+    @include media-mx(1200) {
+      top: 22px;
+      height: 106px;
+    }
+    @include media-mx(767) {
+      transform: rotate(90deg);
+      height: 117px;
+      top: 95px;
+    }
   }
   &__link {
     transition: var(--bs-transition);
@@ -32,6 +63,19 @@
     &:focus {
       color: var(--primary-color);
     }
+    @include media-mx(1200) {
+      font-size: 16px;
+      font-weight: 400;
+    }
+    @include media-mx(767) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 20px;
+      align-items: flex-end;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
   }
   &__background-icon {
     position: relative;
@@ -41,10 +85,27 @@
     margin-right: 18px;
     display: inline-block;
     background-color: var(--primary-color);
+    @include media-mx(1200) {
+      padding: 18px 18px 10px 18px;
+    }
+    @include media-mx(767) {
+      margin-left: 32px;
+      margin-right: 32px;
+      margin-bottom: 20px;
+      padding: 15px 15px 5px 15px;
+    }
   }
   &__icon {
     fill: var(--secondary-color);
     position: relative;
     top: 15%;
+    @include media-mx(1200) {
+      width: 24px;
+      height: 24px;
+    }
+    @include media-mx(767) {
+      width: 20px;
+      height: 20px;
+    }
   }
 }

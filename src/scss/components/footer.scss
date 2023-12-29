@@ -2,11 +2,20 @@
   padding-top: 235px;
   padding-bottom: 18px;
   background: var(--black-color);
+  @include media-mx(1200) {
+    padding-top: 135px;
+  }
+  @include media-mx(767) {
+    padding-top: 220px;
+  }
   // .footer__container
   &__container {
     display: flex;
     gap: 60px;
-    @include media-mx(510) {
+    @include media-mx(1200) {
+      gap: 24px;
+    }
+    @include media-mx(767) {
       flex-direction: column;
       align-items: flex-start;
     }
@@ -23,10 +32,22 @@
       width: 334px;
       margin-top: 1px;
       color: var(--secondary-color);
+      @include media-mx(1200) {
+        width: 213px;
+        height: 72px;
+        overflow: hidden;
+      }
+      @include media-mx(767) {
+        height: 72px;
+        overflow: hidden;
+      }
     }
     &__socials-list {
       margin-top: 38px;
       display: flex;
+      @include media-mx(1200) {
+        margin-top: 30px;
+      }
     }
     &__socials-link {
       transition: var(--bs-transition);
@@ -36,6 +57,10 @@
       padding-right: 30px;
       &:hover {
         fill: var(--primary-color);
+      }
+      @include media-mn-mx(768, 1200) {
+        padding-left: 19px;
+        padding-right: 19px;
       }
     }
     &__socials-link--facebook {
@@ -58,12 +83,19 @@
       font-size: 25px;
       font-weight: 600;
       text-transform: uppercase;
+      @include media-mn-mx(768, 1200) {
+        font-size: 20px;
+      }
     }
     &__list {
       margin-top: 11px;
       display: flex;
       flex-direction: column;
       gap: 11px;
+      @include media-mn-mx(768, 1200) {
+        margin-top: 13px;
+        gap: 13px;
+      }
     }
     &__link {
       transition: var(--bs-transition);
@@ -75,16 +107,26 @@
   }
   .subscribe {
     margin-left: auto;
+    @include media-mx(767) {
+      margin-left: 0;
+    }
     &__title {
       color: var(--secondary-color);
       font-size: 25px;
       font-weight: 600;
       text-transform: uppercase;
+      @include media-mn-mx(768, 1200) {
+        font-size: 20px;
+      }
     }
     &__text {
       width: 298px;
       margin-top: 11px;
       color: var(--secondary-color);
+      @include media-mn-mx(768, 1200) {
+        width: 213px;
+        margin-top: 13px;
+      }
     }
     &__form {
       position: relative;
@@ -100,6 +142,20 @@
       padding-left: 18px;
       padding-right: 65px;
       border-radius: 4px;
+      @include media-mn-mx(768, 1200) {
+        &::placeholder {
+          font-size: 12.8px;
+          font-weight: 300;
+        }
+        width: 213px;
+        padding-top: 15px;
+        padding-bottom: 18px;
+        padding-left: 18px;
+        padding-right: 55px;
+      }
+      @include media-mx(767) {
+        width: 343px;
+      }
     }
     &__button {
       position: absolute;
@@ -109,6 +165,12 @@
       padding: 11px 14px 5px 14px;
       background-color: var(--primary-color);
       fill: var(--secondary-color);
+      @include media-mx(1200) {
+        left: 74%;
+      }
+      @include media-mx(767) {
+        left: 84%;
+      }
     }
   }
   .copyright {
@@ -120,14 +182,30 @@
       gap: 18px;
       padding-top: 18px;
       border-top: 1px solid var(--secondary-color);
+      @include media-mx(1200) {
+        width: 91%;
+      }
+      @include media-mx(767) {
+        align-items: center;
+      }
     }
     &__text {
       color: var(--secondary-color);
       text-align: center;
+      @include media-mx(767) {
+        height: 13px;
+        font-size: 12.8px;
+        font-weight: 300;
+        line-height: normal;
+      }
     }
     &__icon {
       margin-left: 5px;
       fill: var(--secondary-color);
+      @include media-mx(767) {
+        width: 18px;
+        height: 18px;
+      }
     }
   }
 }

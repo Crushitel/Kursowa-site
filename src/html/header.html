@@ -67,24 +67,35 @@
   </div>
   <div class="header__container navigate">
     <nav class="header__menu menu">
+      <button class="menu__burger-button">
+        <svg width="24" height="24" class="menu__burger-icon">
+          <use href="@img/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
       <ul class="menu__list menu__list--left">
         <li class="menu__item">
-          <a href="index.html" class="menu__link menu__link--active">Home</a>
+          <a href="index.html" class="menu__link">Home</a>
         </li>
-        <li class="menu__item"><a href="#" class="menu__link">About</a></li>
-        <li class="menu__item"><a href="#" class="menu__link">Features</a></li>
+        <li class="menu__item">
+          <a href="#about" class="menu__link">About</a>
+        </li>
+        <li class="menu__item">
+          <a href="#features" class="menu__link">Features</a>
+        </li>
       </ul>
       <div class="header__logo-background">
-        <a href="#" class="header__logo"
-          ><img src="@img/logo.jpg" alt="Appoly" width="167" height="28"
+        <a href="index.html" class="header__logo"
+          ><img class="header__logo-img" src="@img/logo.jpg" alt="Appoly"
         /></a>
       </div>
       <ul class="menu__list menu__list--right">
         <li class="menu__item">
           <a href="#" class="menu__link">Screenshot</a>
         </li>
-        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
         <li class="menu__item">
+          <a href="#blog" class="menu__link">Blog</a>
+        </li>
+        <li class="menu__item menu__item--download">
           <a href="#" class="menu__link menu__link--download">Download</a>
         </li>
       </ul>

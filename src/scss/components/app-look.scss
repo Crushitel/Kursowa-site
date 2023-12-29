@@ -10,14 +10,27 @@
   }
   &__picture {
     border-radius: 40px;
+    @include media-mx(1200) {
+      width: 227px;
+      height: 444px;
+      border-radius: 20px;
+    }
   }
   &__item {
     padding-left: 75px;
+    @include media-mx(1200) {
+      padding-left: 25px;
+    }
   }
   &__frame {
     pointer-events: none;
     width: 317px;
     left: 290px;
+    @include media-mx(1200) {
+      width: 227px;
+      height: 444px;
+      left: 230px;
+    }
     z-index: 1;
     top: 40px;
     position: absolute;

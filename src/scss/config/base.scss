@@ -13,6 +13,9 @@
   max-width: rem($maxWidthContainer);
   margin: 0 auto;
   padding: 0 rem($mainOffset);
+  @include media-mn-mx(768, 1200) {
+    width: 94%;
+  }
 }
 .background {
   background-image: url('@img/Background.png');

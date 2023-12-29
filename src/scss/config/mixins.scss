@@ -61,7 +61,7 @@
     @supports (#{$property}: $propertyValue) {
       #{$property}: $propertyValue;
     }
-    // якщо підтримується clamp();
+    // якщо не підтримується clamp();
     @supports not (#{$property}: $propertyValue) {
       #{$property}: calc(
         #{rem($minSize)} + #{$addSize} * (100vw - #{rem($widthTo)}) / #{math.div(
@@ -89,6 +89,15 @@
   $width: em($value);
 
   @media (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin media-mn-mx($value1, $value2) {
+  $width1: em($value1);
+  $width2: em($value2);
+
+  @media (min-width: $width1) and (max-width: $width2) {
     @content;
   }
 }
