@@ -32,7 +32,7 @@ const filePaths = {
   buildFolder,
   srcFolder,
   projectDirName: path.basename(path.resolve()),
-  ftp: ``, // Шлях до потрібної папки на віддаленому сервері. Gulp додасть ім'я папки проекту автоматично
+  ftp: `htdocs`, // Шлях до потрібної папки на віддаленому сервері. Gulp додасть ім'я папки проекту автоматично
 };
 
 export { filePaths };

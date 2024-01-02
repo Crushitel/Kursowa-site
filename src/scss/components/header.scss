@@ -142,7 +142,9 @@
       }
     }
     &__item--download {
-      display: block;
+      @include media-mx(1169) {
+        display: block;
+      }
     }
     &__list--right {
       margin-left: auto;

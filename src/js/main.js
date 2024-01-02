@@ -24,28 +24,31 @@ BaseHelpers.addLoadedClass();
 SendEmailForm();
 
 // Створення об'єкту з параметрами Swiper
-const swiperOptions = {
-  modules: [Pagination, EffectCoverflow],
-  slidesPerView: 1.502,
-  centeredSlides: true,
-  grabCursor: true,
-  effect: 'coverflow',
-  coverflowEffect: {
-    rotate: 0,
-    stretch: 480, // Значення за замовчуванням для розширення
-    depth: 200,
-    modifier: 1,
-    slideShadows: true,
-  },
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-};
+let customerSwiper; // Змінна для зберігання посилання на Swiper
 
-function setStretchValue() {
+function initSwiper() {
   const screenWidth = window.innerWidth;
+
+  const swiperOptions = {
+    modules: [Pagination, EffectCoverflow],
+    slidesPerView: 1.502,
+    centeredSlides: true,
+    grabCursor: true,
+    effect: 'coverflow',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 480, // Значення за замовчуванням для розширення
+      depth: 200,
+      modifier: 1,
+      slideShadows: true,
+    },
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  };
+
   if (screenWidth < 1170) {
     swiperOptions.coverflowEffect.stretch = 280;
     if (screenWidth < 768) {
@@ -55,12 +58,16 @@ function setStretchValue() {
     swiperOptions.coverflowEffect.stretch = 480;
   }
 
-  const customerSwiper = new Swiper('.customers__swiper', swiperOptions);
+  if (customerSwiper) {
+    customerSwiper.destroy(true, true); // Знищуємо попередній Swiper перед ініціалізацією нового
+  }
+
+  customerSwiper = new Swiper('.customers__swiper', swiperOptions);
 }
 
-setStretchValue();
+initSwiper();
 
-window.addEventListener('resize', setStretchValue);
+window.addEventListener('resize', initSwiper);
 
 const app_look_swiper = new Swiper('.app-look__swiper', {
   modules: [Navigation, Pagination, EffectCoverflow],

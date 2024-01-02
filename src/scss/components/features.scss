@@ -32,6 +32,8 @@
   &__picture {
     width: 375px;
     height: 812px;
+    left: 50%;
+    transform: translateX(-50%);
     @include media-mx(1169) {
       width: 214px;
       height: 468px;
