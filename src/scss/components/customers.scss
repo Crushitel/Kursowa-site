@@ -11,31 +11,74 @@
     @extend %title;
     color: var(--secondary-color);
     text-align: center;
+    @include media-mx(767) {
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
   }
   &__text {
     color: var(--secondary-color);
     @extend %text;
     text-align: center;
     margin-top: 23px;
+    @include media-mx(1169) {
+      width: 450px;
+      height: 70px;
+      overflow: hidden;
+    }
+    @include media-mx(767) {
+      width: 300px;
+      height: 70px;
+      overflow: hidden;
+    }
   }
   &__swiper {
     padding-bottom: 60px;
     margin-top: 60px;
-    width: 100%;
+    width: 1156px;
+    @include media-mx(1169) {
+      width: 679px;
+    }
+    @include media-mx(767) {
+      width: 516px;
+    }
+    @include media-mx(516) {
+      right: calc(71px - ((71 - 0) / (516 - 375)) * (100% - 375px));
+    }
   }
   &__item {
     border-radius: 10px;
     padding: 40px 61px 36px 62px;
     background-color: var(--secondary-color);
+    @include media-mx(1169) {
+      padding: 23px 38px 20px 38px;
+    }
+    @include media-mx(767) {
+      padding: 20px 14px 20px 14px;
+    }
   }
   &__picture {
     margin: 0 280px;
     border-radius: 96px;
+    @include media-mx(1169) {
+      width: 50px;
+      height: 50px;
+      margin: 0 162px;
+    }
+    @include media-mx(767) {
+      margin: 0 135px;
+    }
   }
   &__name {
     @extend %title;
     text-align: center;
     margin-top: 20px;
+    @include media-mx(1169) {
+      font-size: 25px;
+      font-weight: 600;
+      line-height: 1.5;
+    }
   }
   &__proffecion {
     text-align: center;
@@ -44,15 +87,33 @@
     font-weight: 600;
     color: var(--black-color);
     margin-top: 1px;
+    @include media-mx(1169) {
+      font-size: 16px;
+      font-weight: 400;
+    }
   }
   .swiper-slide-next,
   .swiper-slide-prev {
     padding: 40px 37px 23px 38px;
+    @include media-mx(1200) {
+      padding: 23px 38px 20px 38px;
+    }
+    @include media-mx(767) {
+      padding: 20px 14px 20px 14px;
+    }
   }
   &__content {
     color: var(--gray-color);
     margin-top: 8px;
     text-align: center;
+    @include media-mx(1169) {
+      width: 374px;
+      height: 70px;
+      overflow: hidden;
+    }
+    @include media-mx(767) {
+      width: 316px;
+    }
   }
   &__pagination {
     --swiper-pagination-bullet-inactive-color: var(--secondary-color);

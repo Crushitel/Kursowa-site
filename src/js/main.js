@@ -43,42 +43,54 @@ function sendEmail() {
   });
 }
 
-// Ініціалізація Swiper
-const customer_swiper = new Swiper('.customers__swiper', {
-  modules: [Navigation, Pagination, EffectCoverflow],
-  slidesPerView: 1.51,
+// Створення об'єкту з параметрами Swiper
+const swiperOptions = {
+  modules: [Pagination, EffectCoverflow],
+  slidesPerView: 1.502,
   centeredSlides: true,
   grabCursor: true,
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 0,
-    stretch: 480,
+    stretch: 480, // Значення за замовчуванням для розширення
     depth: 200,
     modifier: 1,
     slideShadows: true,
   },
   loop: true,
-  // Пагінація
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
   },
-  // Стрілки навігації
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
+};
+
+function setStretchValue() {
+  const screenWidth = window.innerWidth;
+  if (screenWidth < 1170) {
+    swiperOptions.coverflowEffect.stretch = 280;
+    if (screenWidth < 768) {
+      swiperOptions.coverflowEffect.stretch = 214;
+    }
+  } else {
+    swiperOptions.coverflowEffect.stretch = 480;
+  }
+
+  const customerSwiper = new Swiper('.customers__swiper', swiperOptions);
+}
+
+setStretchValue();
+
+window.addEventListener('resize', setStretchValue);
 
 const app_look_swiper = new Swiper('.app-look__swiper', {
   modules: [Navigation, Pagination, EffectCoverflow],
-  slidesPerView: 2.2,
+  slidesPerView: 3,
   centeredSlides: true,
   grabCursor: true,
   effect: 'coverflow',
   coverflowEffect: {
     rotate: 0,
-    stretch: 70,
+    stretch: -30,
     depth: 100,
     modifier: 1,
     slideShadows: false,

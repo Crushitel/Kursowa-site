@@ -11,7 +11,7 @@
     @extend %text;
     margin-top: 23px;
     text-align: center;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 450px;
       height: 70px;
       overflow: hidden;
@@ -27,7 +27,7 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       gap: 24px;
     }
     @include media-mx(767) {
@@ -41,7 +41,7 @@
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding-bottom: 30px;
       max-width: 213px;
     }
@@ -50,7 +50,7 @@
     }
   }
   &__img {
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 213px;
       height: 228px;
     }
@@ -81,5 +81,9 @@
   &__description {
     padding-left: 18px;
     padding-right: 18px;
+    @include media-mn-mx(768, 1169) {
+      padding-right: 0;
+      padding-left: 17px;
+    }
   }
 }

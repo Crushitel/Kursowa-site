@@ -24,6 +24,10 @@
 .section {
   padding-top: 120px;
   padding-bottom: 120px;
+  @include media-mx(767) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 }
 // Стили відгукуючих картинок (IBG) ============================================
 [class*='-ibg'] {

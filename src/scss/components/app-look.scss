@@ -10,49 +10,77 @@
   }
   &__picture {
     border-radius: 40px;
-    @include media-mx(1200) {
-      width: 227px;
-      height: 444px;
+    @include media-mx(1169) {
       border-radius: 20px;
+      width: 186px;
     }
   }
   &__item {
-    padding-left: 75px;
-    @include media-mx(1200) {
-      padding-left: 25px;
+    padding-left: 16px;
+    @include media-mx(1169) {
+      padding-left: 14px;
     }
   }
   &__frame {
     pointer-events: none;
     width: 317px;
-    left: 290px;
-    @include media-mx(1200) {
+    left: 284px;
+    @include media-mx(1169) {
       width: 227px;
       height: 444px;
-      left: 230px;
+      top: 42px;
+      left: 200px;
     }
     z-index: 1;
     top: 40px;
     position: absolute;
   }
   &__swiper {
-    position: relative;
     padding-bottom: 80px;
     padding-top: 60px;
-    width: 75%;
+    max-width: 879px;
+    @include media-mx(1169) {
+      width: 615px;
+    }
+    @include media-mx(618) {
+      right: calc(120px - ((120 - 0) / (618 - 375)) * (100% - 375px));
+    }
   }
   &__title {
     @extend %title;
     text-align: center;
+    @include media-mx(1169) {
+      width: 360px;
+    }
+    @include media-mx(767) {
+      font-size: 25px;
+      font-weight: 600;
+      width: 287px;
+    }
   }
   &__text {
     @extend %text;
     text-align: center;
     margin-top: 23px;
+    @include media-mx(1169) {
+      width: 450px;
+      height: 70px;
+      overflow: hidden;
+      margin-top: 18px;
+    }
+    @include media-mx(767) {
+      width: 300px;
+      height: 70px;
+      overflow: hidden;
+      margin-top: 18px;
+    }
   }
   .swiper-pagination-bullet-active {
     position: relative;
     top: 1.5px;
+    @include media-mx(618) {
+      top: 1px;
+    }
   }
   &__pagination {
     --swiper-pagination-bullet-inactive-color: var(--primary-color);
@@ -69,10 +97,13 @@
   }
   &__button-prev,
   &__button-next {
+    @include media-mx(1169) {
+      display: none;
+    }
     --swiper-navigation-color: var(--primary-color);
-    --swiper-navigation-sides-offset: -43px;
+    --swiper-navigation-sides-offset: 86px;
     --swiper-navigation-size: 24px;
-    top: 60%;
+    top: 48%;
     &:hover,
     &:focus {
       --swiper-navigation-color: var(--secondary-color);

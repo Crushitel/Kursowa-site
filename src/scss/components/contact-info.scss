@@ -1,7 +1,7 @@
 .contact-info {
   &__container {
     padding-bottom: 133px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       display: flex;
       justify-content: center;
       padding-bottom: 84px;
@@ -16,18 +16,18 @@
     border-radius: 30px;
     box-shadow: 0px 8px 43px -9px rgba(33, 33, 33, 0.66);
     padding: 60px 193px 65px 50px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding: 45px 103px 45px 18px;
     }
     @include media-mx(767) {
       max-width: 343px;
-      padding: 30px 43px 34px 51px;
+      padding: 30px 34px 34px 34px;
     }
   }
   &__list {
     display: flex;
     gap: 234px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       gap: 133px;
     }
     @include media-mx(767) {
@@ -43,7 +43,7 @@
     display: inline-block;
     border-left: 4px solid var(--gray-color);
     height: 117px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       top: 22px;
       height: 106px;
     }
@@ -63,7 +63,7 @@
     &:focus {
       color: var(--primary-color);
     }
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       font-size: 16px;
       font-weight: 400;
     }
@@ -85,7 +85,7 @@
     margin-right: 18px;
     display: inline-block;
     background-color: var(--primary-color);
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding: 18px 18px 10px 18px;
     }
     @include media-mx(767) {
@@ -99,7 +99,7 @@
     fill: var(--secondary-color);
     position: relative;
     top: 15%;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 24px;
       height: 24px;
     }

@@ -2,7 +2,7 @@
   padding-top: 235px;
   padding-bottom: 18px;
   background: var(--black-color);
-  @include media-mx(1200) {
+  @include media-mx(1169) {
     padding-top: 135px;
   }
   @include media-mx(767) {
@@ -12,15 +12,18 @@
   &__container {
     display: flex;
     gap: 60px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       gap: 24px;
     }
     @include media-mx(767) {
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center;
     }
   }
   .title {
+    @include media-mx(767) {
+      margin-right: 35px;
+    }
     &__logo {
       color: var(--secondary-color);
       font-size: 31.25px;
@@ -32,7 +35,7 @@
       width: 334px;
       margin-top: 1px;
       color: var(--secondary-color);
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         width: 213px;
         height: 72px;
         overflow: hidden;
@@ -45,7 +48,7 @@
     &__socials-list {
       margin-top: 38px;
       display: flex;
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         margin-top: 30px;
       }
     }
@@ -78,6 +81,9 @@
     }
   }
   .quick-links {
+    @include media-mx(767) {
+      margin-right: 187px;
+    }
     &__title {
       color: var(--secondary-color);
       font-size: 25px;
@@ -165,7 +171,7 @@
       padding: 11px 14px 5px 14px;
       background-color: var(--primary-color);
       fill: var(--secondary-color);
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         left: 74%;
       }
       @include media-mx(767) {
@@ -182,7 +188,7 @@
       gap: 18px;
       padding-top: 18px;
       border-top: 1px solid var(--secondary-color);
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         width: 91%;
       }
       @include media-mx(767) {

@@ -10,21 +10,37 @@
   &__title {
     @extend %title;
     color: var(--secondary-color);
+    @include media-mx(767) {
+      font-size: 25px;
+      font-weight: 600;
+    }
   }
   &__text {
     @extend %text;
     color: var(--secondary-color);
     text-align: center;
     margin-top: 18px;
+    @include media-mx(1169) {
+      width: 450px;
+      height: 70px;
+      overflow: hidden;
+    }
+    @include media-mx(767) {
+      width: 300px;
+    }
   }
   &__picture {
     width: 375px;
     height: 812px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 214px;
       height: 468px;
       box-shadow: 10px 10px 100px 0px rgba(24, 48, 63, 0.3);
       top: 38%;
+    }
+    @include media-mx(767) {
+      top: 42%;
+      box-shadow: 40px 40px 100px 0px rgba(24, 48, 63, 0.5);
     }
     top: 29%;
     position: absolute;
@@ -37,10 +53,18 @@
     flex-direction: column;
     align-items: center;
     margin-top: 60px;
+    @include media-mx(767) {
+      margin-top: 40px;
+    }
     :nth-child(2n):not(:last-child) {
       align-self: flex-start;
     }
     &--horizontal-top {
+      @include media-mx(767) {
+        flex-direction: column;
+        margin-top: 40px;
+        gap: 40px;
+      }
       flex-direction: row;
       gap: 243px;
       justify-content: space-between;
@@ -50,8 +74,13 @@
       margin-top: 347px;
       flex-direction: row;
       justify-content: space-between;
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         margin-top: 86px;
+      }
+      @include media-mx(767) {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 648px;
       }
     }
   }
@@ -61,13 +90,19 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 40px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       margin-bottom: 0;
     }
     &--right {
+      @include media-mx(767) {
+        align-items: center;
+      }
       align-items: flex-start;
     }
     &--left {
+      @include media-mx(767) {
+        align-items: center;
+      }
       align-items: flex-end;
     }
     &--bottom {
@@ -82,16 +117,22 @@
     font-weight: 600;
     color: var(--secondary-color);
     margin-top: 22px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       font-size: 20px;
     }
     &--bottom {
       font-size: 20px;
     }
     &--right {
+      @include media-mx(767) {
+        text-align: center;
+      }
       text-align: left;
     }
     &--left {
+      @include media-mx(767) {
+        text-align: center;
+      }
       text-align: right;
     }
   }
@@ -100,9 +141,15 @@
     color: var(--secondary-color);
     margin-top: 18px;
     &--right {
+      @include media-mx(767) {
+        text-align: center;
+      }
       text-align: left;
     }
     &--left {
+      @include media-mx(767) {
+        text-align: center;
+      }
       text-align: right;
     }
   }

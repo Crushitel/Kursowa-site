@@ -11,7 +11,7 @@
     @extend %text;
     margin-top: 23px;
     text-align: center;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 450px;
       height: 70px;
       overflow: hidden;
@@ -39,7 +39,7 @@
     padding-right: 24px;
     padding-top: 29px;
     padding-bottom: 53px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding-left: 7px;
       padding-right: 6px;
       padding-bottom: 30px;
@@ -58,7 +58,7 @@
     display: block;
     position: absolute;
     border-radius: 220px;
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       height: 178px;
       width: 178px;
     }
@@ -68,7 +68,7 @@
     top: 11px;
     left: 51.5%;
     transform: translateX(-51.5%);
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       width: 160px;
       height: 160px;
       left: 107px;
@@ -86,7 +86,7 @@
     text-transform: uppercase;
     color: var(--black-color);
     text-align: center;
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       font-size: 20px;
       font-weight: 600;
       margin-top: 20px;
@@ -98,7 +98,7 @@
     font-size: 20px;
     font-weight: 600;
     text-transform: uppercase;
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       font-size: 16px;
       font-weight: 400;
       margin-top: 9px;
@@ -108,7 +108,7 @@
     margin-top: 14px;
     color: var(--gray-color);
     text-align: center;
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       width: 158px;
       height: 69px;
       overflow: hidden;
@@ -136,14 +136,14 @@
     &:hover {
       fill: var(--primary-color);
     }
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       padding-left: 14px;
       padding-right: 14px;
     }
   }
   &__socials-link--facebook {
     padding-left: 24px;
-    @include media-mn-mx(768, 1200) {
+    @include media-mn-mx(767, 1169) {
       padding-left: 14px;
     }
   }

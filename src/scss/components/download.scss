@@ -3,8 +3,9 @@
   &__container {
     display: flex;
     gap: 80px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       align-items: center;
+      justify-content: center;
       gap: 24px;
     }
     @include media-mx(767) {
@@ -14,7 +15,7 @@
   }
   &__title {
     @extend %title;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 288px;
     }
     @include media-mx(767) {
@@ -24,7 +25,7 @@
     }
   }
   &__text {
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 329px;
       height: 73px;
       overflow: hidden;
@@ -41,12 +42,15 @@
     display: flex;
     margin-top: 60px;
     gap: 30px;
+    @include media-mx(767) {
+      gap: 25px;
+    }
     &__item {
       width: 170px;
       padding-top: 30px;
       padding-bottom: 20px;
       border-radius: 10px;
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         width: 96px;
         height: 100px;
         padding-top: 11px;
@@ -62,7 +66,7 @@
       text-align: center;
       line-height: normal;
       text-transform: uppercase;
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         font-size: 16px;
         margin-top: 0;
       }
@@ -74,7 +78,7 @@
       font-size: 20px;
       font-weight: 600;
       text-transform: uppercase;
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         font-size: 16px;
         font-weight: 400;
         margin-top: 0;
@@ -89,7 +93,7 @@
     }
   }
   &__picture {
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       width: 334.482px;
       height: 311.146px;
     }

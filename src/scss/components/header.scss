@@ -15,7 +15,7 @@
     color: var(--secondary-color);
     padding-top: 35px;
     padding-bottom: 20px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding-top: 25px;
       padding-bottom: 35px;
     }
@@ -37,7 +37,7 @@
     padding-bottom: 15px;
     display: flex;
     align-items: center;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding-top: 28px;
       padding-bottom: 30px;
     }
@@ -54,7 +54,7 @@
     padding-right: 15px;
     padding-top: 42px;
     padding-bottom: 18px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding-top: 33px;
       padding-bottom: 31px;
     }
@@ -101,7 +101,7 @@
     height: 28px;
     @include media-mx(767) {
       width: 79px;
-      height: 12px;
+      height: auto;
     }
   }
   .navigate {
@@ -113,14 +113,14 @@
   .menu {
     position: relative;
     padding: 17px 5px 13px 52px;
-    @include media-mx(1200) {
+    @include media-mx(1169) {
       padding: 17px 5px 13px 18px;
     }
     @include media-mx(767) {
       padding: 8px 3px 8px 8px;
     }
     &__burger-button {
-      @include media-mn(1200) {
+      @include media-mn(1169) {
         display: none;
       }
       height: 24px;
@@ -133,7 +133,7 @@
       justify-content: center;
     }
     &__item {
-      @include media-mx(1200) {
+      @include media-mx(1169) {
         display: none;
       }
     }
