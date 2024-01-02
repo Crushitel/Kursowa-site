@@ -67,7 +67,7 @@
   </div>
   <div class="header__container navigate">
     <nav class="header__menu menu">
-      <button class="menu__burger-button">
+      <button class="menu__burger-button" data-burger-open>
         <svg width="24" height="24" class="menu__burger-icon">
           <use href="@img/sprite.svg#icon-burger"></use>
         </svg>
@@ -97,6 +97,32 @@
         </li>
         <li class="menu__item menu__item--download">
           <a href="#" class="menu__link menu__link--download">Download</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="header__container">
+    <nav class="header__burger-menu burger-menu is-hidden" data-burger-menu>
+      <button class="burger-menu__close-button" data-burger-close>
+        <svg width="24" height="24" class="burger-menu__close-icon">
+          <use href="@img/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <ul class="burger-menu__list">
+        <li class="burger-menu__item">
+          <a href="index.html" class="burger-menu__link">Home</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#about" class="burger-menu__link">About</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#features" class="burger-menu__link">Features</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#" class="burger-menu__link">Screenshot</a>
+        </li>
+        <li class="burger-menu__item">
+          <a href="#blog" class="burger-menu__link">Blog</a>
         </li>
       </ul>
     </nav>

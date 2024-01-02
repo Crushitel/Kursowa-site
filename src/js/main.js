@@ -9,7 +9,7 @@
 // import MousePRLX from './libs/parallaxMouse'
 // import AOS from 'aos'
 import Swiper from 'swiper';
-import emailjs from '@emailjs/browser';
+import SendEmailForm from './modules/email';
 import { Navigation, Pagination, EffectCoverflow } from 'swiper/modules';
 import BaseHelpers from './helpers/BaseHelpers';
 import BurgerMenu from './modules/BurgerMenu';
@@ -20,28 +20,8 @@ BaseHelpers.addTouchClass();
 
 BaseHelpers.addLoadedClass();
 
-// Відправка форми
-document.addEventListener('DOMContentLoaded', function () {
-  let form = document.querySelector('.subscribe__form');
-  form.addEventListener('submit', function (event) {
-    event.preventDefault(); // Це для того, щоб форма не відправлялась звичайним способом
-
-    sendEmail(); // Виклик функції sendEmail
-  });
-});
-
-// Відправка email
-function sendEmail() {
-  (function () {
-    emailjs.init('Bgch-lIjgzMnzHw7s');
-  })();
-  var params = {
-    email_id: document.querySelector('.subscribe__input').value,
-  };
-  emailjs.send('service_gnk14as', 'template_7o3o79r', params).then((res) => {
-    alert('You are subcribed to our newsletter');
-  });
-}
+//Виклик функції відправки email
+SendEmailForm();
 
 // Створення об'єкту з параметрами Swiper
 const swiperOptions = {
@@ -120,7 +100,7 @@ const app_look_swiper = new Swiper('.app-look__swiper', {
 /**
  *  Модуль для роботи із меню (Бургер)
  * */
-new BurgerMenu().init();
+BurgerMenu();
 
 /**
  *  Бібліотека для анімацій

@@ -1,44 +1,24 @@
-import Popup from '../helpers/Popup.js';
+function BurgerMenu() {
+  const refs = {
+    openBurgerBtn: document.querySelector('[data-burger-open]'),
+    closeBurgerBtn: document.querySelector('[data-burger-close]'),
+    menu: document.querySelector('[data-burger-menu]'),
+    links: document.querySelectorAll('.burger-menu__link'), // Використовуємо querySelectorAll для отримання всіх елементів
+  };
+  refs.openBurgerBtn.addEventListener('click', toggleModal);
+  refs.closeBurgerBtn.addEventListener('click', toggleModal);
+  refs.links.forEach((link) => {
+    link.addEventListener('click', toggleModalOnClick);
+  });
 
-class BurgerMenu extends Popup {
-  constructor() {
-    super();
-
-    this.burgerButton = document.querySelector('.icon-menu');
+  function toggleModal() {
+    refs.menu.classList.toggle('is-hidden');
   }
 
-  /**
-   * Initialize the menu functionality.
-   */
-  init() {
-    if (this.burgerButton) {
-      document.addEventListener('click', ({ target }) => {
-        if (target.closest('.icon-menu')) {
-          this.html.classList.toggle('menu-open');
-          this.toggleBodyLock(this.isMenuOpen);
-        }
-      });
+  function toggleModalOnClick(event) {
+    if (event.target.classList.contains('burger-menu__link')) {
+      refs.menu.classList.add('is-hidden');
     }
-  }
-
-  /**
-   * Open the menu.
-   */
-  menuOpen() {
-    this.toggleBodyLock(true);
-    this.html.classList.add('menu-open');
-  }
-
-  /**
-   * Close the menu.
-   */
-  menuClose() {
-    this.toggleBodyLock(false);
-    this.html.classList.remove('menu-open');
-  }
-
-  get isMenuOpen() {
-    return this.html.classList.contains('menu-open');
   }
 }
 

@@ -1,4 +1,8 @@
 .header {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+  }
   position: absolute;
   width: 100%;
   z-index: 1;
@@ -173,10 +177,5 @@
         padding: 12px 6px 9px 6px;
       }
     }
-  }
-  // .header__container
-  &__container {
-    display: flex;
-    justify-content: space-between;
   }
 }
